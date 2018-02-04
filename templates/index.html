@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Jobb från CV</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- Bootstrap and Font Awesome css-->
+    <link rel="stylesheet" href="static/css/font-awesome.css">
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <!-- Google fonts-->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Pacifico">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+    <!-- Theme stylesheet-->
+    <link rel="stylesheet" href="static/css/style.default.css" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="static/css/custom.css">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="static/favicon.png">
+    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+  </head>
+  <body>
+    <div style="background-image: url('static/img/paris.jpg')" class="main"> 
+      <div class="overlay"></div>
+      <div class="container">
+        <h1 class="cursive">Jobb från CV:n</h1>
+        <h2 class="sub">Ladda upp ditt cv och få en lista med passande jobb. Stödjer CV:n i formaten: Word (.docx), OpenDocument (.odt) och Markdown (.md).</h2>
+        <div class="">
+          <ul class="list-group">
+              {% for entry in entries %}
+                <li class="list-group-item list-group-item-action"><a href="{{ entry.platsannonsUrl }}" class"sub">{{ entry.annonsrubrik }}</a></li>
+              {% endfor %}
+              </ul>
+              <br />
+          <div class="row">
+              <form method="post" action="/" enctype="multipart/form-data" class="form-inline mx-auto">
+                <label class="btn btn-default btn-file btn-primary">
+                    Välj fil <input type="file" name="file" accept=".docx,.odt,.md,.txt" style="display: none;">
+                </label>
+                   <input type="submit" class="btn btn-danger" value="Skicka">
+              </form>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <p>&copy;2017 Daniel Öberg</p>
+            </div>
+            <div class="col-md-6">
+              <p class="credit">Design by <a href="https://www.bootstrapious.com">Bootstrapious</a><br />& <a href="https://fity.cz">Fity</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- JAVASCRIPT FILES -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="static/javascripts/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+    <script src="static/js/bootstrap.min.js"></script>
+    <script src="static/js/jquery.cookie.js"></script>
+    <script src="static/js/front.js"></script>
+  </body>
+</html>
