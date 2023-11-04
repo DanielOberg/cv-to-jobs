@@ -1,6 +1,6 @@
 Flask==0.12.1
 pandas==0.20.1
-requests==2.14.2
+requests==2.31.0
 ptvsd==3.2.1
 scikit_learn==0.19.1
 gunicorn
