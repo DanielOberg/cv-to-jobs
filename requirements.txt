@@ -1,4 +1,4 @@
-Flask==0.12.1
+Flask==2.2.5
 pandas==0.20.1
 requests==2.14.2
 ptvsd==3.2.1
